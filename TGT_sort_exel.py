@@ -42,6 +42,7 @@ def sort_exels(file,file_new):
         print(j)
         j=j+15
 
+    data.reverse()
     book_new=opxl.Workbook()
     sheet_new=book_new.active
 
@@ -49,9 +50,7 @@ def sort_exels(file,file_new):
         sheet_new.cell(row=1,column=2+i).value=info[i]
 
     i=0
-    data.reverse()
     for data_new in data:
-        #sheet_new.merge_cells(start_row=1, start_column=2+3*j, end_row=1, end_column=4+3*j)
         for date_new in data_new:
             for j in range(0,15):
                 sheet_new.cell(row=2+i,column=1+j).value=date_new[j]
@@ -59,26 +58,6 @@ def sort_exels(file,file_new):
     book_new.save(file_new)
     book_new.close()
     book.close()
-    # print (date)
-    # data=[[1,2,3],1,2,3]
-    # print(data[0])
 
 
 sort_exels("Скв. 388 (01.11.2016-30.11.2023).xlsx","Скв. 388 (01.11.2016-30.11.2023)_new.xlsx")
-# sort_exels("111.xlsx","111_new.xlsx")
-# test1=chr(1+48)+".01"
-# i=10
-# while(i!=0):
-#     if(i==8):
-#         continue
-#     else:
-#         i=i-1
-#         print(i)
-
-# test=opxl.Workbook()
-# test_=test.active
-# test_.cell(row=1,column=1).value=test1
-# # test_.merge_cells(start_row=1, start_column=2, end_row=1, end_column=4)
-# # test_.merge_cells(start_row=1, start_column=2, end_row=1, end_column=4)
-# test.save("test.xlsx")
-# test.close()
