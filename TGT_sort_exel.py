@@ -65,6 +65,7 @@ def sort_exels(file,file_new):
 
 
 sort_exels("Скв. 388 (01.11.2016-30.11.2023).xlsx","Скв. 388 (01.11.2016-30.11.2023)_new.xlsx")
+print("hello")
 # sort_exels("111.xlsx","111_new.xlsx")
 # test1=chr(1+48)+".01"
 # i=10
